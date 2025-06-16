@@ -29,4 +29,20 @@ export default function Home() {
           <h1 className="text-xl font-bold">AI Quote Generator</h1>
           <Input
             placeholder="Describe the customer need..."
-
+            value={customerNeed}
+            onChange={(e) => setCustomerNeed(e.target.value)}
+          />
+          <Button onClick={handleGenerateQuote} disabled={loading}>
+            {loading ? "Generating..." : "Generate Quote"}
+          </Button>
+          {quote && (
+            <div className="mt-4 p-4 bg-gray-100 rounded">
+              <h2 className="font-semibold mb-2">Suggested Quote:</h2>
+              <pre>{quote}</pre>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </main>
+  );
+}
