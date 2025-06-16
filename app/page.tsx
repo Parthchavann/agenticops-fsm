@@ -1,13 +1,11 @@
 "use client";
 
-import * as React from "react";
+import React from "react";
 
-export default function Home(): JSX.Element {
+export default function Home() {
   return (
-    <main className="p-10">
-      <h1 className="text-2xl font-bold text-center text-green-600">
-        ✅ It works! You’re now error-free 🎉
-      </h1>
+    <main style={{ padding: "2rem", textAlign: "center" }}>
+      <h1 style={{ fontSize: "2rem", color: "green" }}>✅ It works!</h1>
     </main>
   );
 }
