@@ -13,10 +13,9 @@ export async function POST(req: NextRequest) {
 
   const result = await model.call([
     new HumanMessage(
-      `You're a field service quote expert. Generate a professional service quote for the following request: "${need}". Include estimated cost, service breakdown, and timeframe.`
+      `You're a professional field service estimator. Generate a detailed quote for: "${need}". Include service steps, estimated cost, and timeframe.`
     ),
   ]);
 
   return NextResponse.json({ quote: result.content });
 }
-
